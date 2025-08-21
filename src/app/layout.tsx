@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import "./globals.css";
 import Link from "next/link";
 
@@ -26,9 +27,7 @@ export default function RootLayout({
           </nav>
         </header>
         <main className="mx-auto max-w-6xl p-6">{children}</main>
-        <footer className="border-t p-4 text-sm opacity-70">
-          © {new Date().getFullYear()} Studio
-        </footer>
+        <Footer />
       </body>
     </html>
   );

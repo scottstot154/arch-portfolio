@@ -1,0 +1,19 @@
+{
+  "company": "Studio Arka",
+  "tagline": "Designing timeless spaces with modern sensibilities.",
+  "socialLinks": [
+    {
+      "platform": "Instagram",
+      "url": "https://instagram.com/studioarka"
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "https://linkedin.com/company/studioarka"
+    },
+    {
+      "platform": "Facebook",
+      "url": "https://facebook.com/studioarka"
+    }
+  ],
+  "copyright": "© 2025 Studio Arka. All rights reserved."
+}
