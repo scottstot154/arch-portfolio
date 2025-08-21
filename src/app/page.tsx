@@ -1,28 +1,51 @@
-import { allProjects } from "contentlayer/generated";
 import Link from "next/link";
-import Image from "next/image";
 import ProjectsCarousel from "@/components/ProjectsCarousel";
+import Hero from "@/components/Hero";
 
 export default function Home() {
-  const featured = allProjects.sort((a, b) => b.year - a.year).slice(0, 4);
   return (
-    <div className="space-y-8">
-      <section className="grid lg:grid-cols-2 gap-6 items-center">
-        <div>
-          <h1 className="text-4xl font-semibold">
-            Studio — architecture & interiors
-          </h1>
-          <p className="mt-2 opacity-75">
-            Selected residential and civic projects.
-          </p>
+    <div className="space-y-16">
+      {/* HERO */}
+      <div className="max-w-6xl mx-auto px-4">
+        <Hero
+          title="Studio"
+          subtitle="architecture & interiors"
+          imageSrc="/images/hero.jpg"
+          heightClass="h-[50vh] md:h-[65vh]"
+          align="center"
+        />
+      </div>
+
+      {/* CTA + Carousel */}
+      <section className="max-w-6xl mx-auto px-4">
+        <div className="flex items-center justify-between">
+          <div>
+            <h2 className="text-xl sm:text-2xl font-semibold">
+              Selected projects
+            </h2>
+            <p className="text-gray-600">Residential and civic works</p>
+          </div>
           <Link
             href="/projects"
-            className="inline-block mt-4 rounded border px-4 py-2"
+            className="hidden sm:inline-block rounded border border-gray-300 px-4 py-2 text-sm font-medium hover:bg-gray-100 transition"
           >
-            View Projects
+            View all
           </Link>
         </div>
-        <ProjectsCarousel />
+
+        <div className="mt-6">
+          <ProjectsCarousel />
+        </div>
+
+        {/* Mobile CTA */}
+        <div className="sm:hidden mt-6">
+          <Link
+            href="/projects"
+            className="block w-full text-center rounded border border-gray-300 px-4 py-2 text-sm font-medium hover:bg-gray-100 transition"
+          >
+            View all projects
+          </Link>
+        </div>
       </section>
     </div>
   );
