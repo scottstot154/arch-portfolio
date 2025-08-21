@@ -4,8 +4,8 @@ import React from "react";
 type HeroProps = {
   title: string;
   subtitle?: string;
-  imageSrc: string; // e.g. "/images/hero.jpg"
-  heightClass?: string; // override height if needed: "h-[60vh]" etc.
+  imageSrc: string;
+  heightClass?: string;
   align?: "center" | "left";
 };
 
@@ -17,9 +17,7 @@ export default function Hero({
   align = "center",
 }: HeroProps) {
   return (
-    <section
-      className={`relative w-full ${heightClass} overflow-hidden rounded-xl`}
-    >
+    <section className={`relative w-full ${heightClass} overflow-hidden`}>
       {/* Background image */}
       <Image
         src={imageSrc}
@@ -30,8 +28,8 @@ export default function Hero({
         sizes="100vw"
       />
 
-      {/* Subtle gradient overlay for text legibility */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
+      {/* Radial fade overlay: visible in center, fully transparent at edges */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.6)_0%,rgba(0,0,0,0.4)_50%,rgba(0,0,0,0)_100%)]" />
 
       {/* Content */}
       <div

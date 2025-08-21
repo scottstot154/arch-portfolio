@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ProjectsCarousel from "@/components/ProjectsCarousel";
 import Hero from "@/components/Hero";
+import hero from "@/content/hero.json";
 
 export default function Home() {
   return (
@@ -8,9 +9,9 @@ export default function Home() {
       {/* HERO */}
       <div className="max-w-6xl mx-auto px-4">
         <Hero
-          title="Studio"
-          subtitle="architecture & interiors"
-          imageSrc="/images/hero.jpg"
+          title={hero.title}
+          subtitle={hero.subtitle}
+          imageSrc={hero.imageSrc}
           heightClass="h-[50vh] md:h-[65vh]"
           align="center"
         />
