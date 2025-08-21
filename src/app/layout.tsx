@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen">
+      <body className="min-h-screen flex flex-col">
         <header className="border-b">
           <nav className="mx-auto flex max-w-6xl items-center justify-between p-4">
             <Link href="/" className="text-xl font-semibold">
@@ -26,7 +26,7 @@ export default function RootLayout({
             </div>
           </nav>
         </header>
-        <main className="mx-auto max-w-6xl p-6">{children}</main>
+        <main className="mx-auto max-w-6xl p-6 flex-grow">{children}</main>
         <Footer />
       </body>
     </html>
