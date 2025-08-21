@@ -1,6 +1,7 @@
 import { allProjects } from "contentlayer/generated";
 import Link from "next/link";
 import Image from "next/image";
+import ProjectsCarousel from "@/components/ProjectsCarousel";
 
 export default function Home() {
   const featured = allProjects.sort((a, b) => b.year - a.year).slice(0, 4);
@@ -21,30 +22,7 @@ export default function Home() {
             View Projects
           </Link>
         </div>
-        <div className="grid grid-cols-2 gap-3">
-          {featured.map((p) => (
-            <Link
-              key={p.slug}
-              href={`/projects/${p.slug}`}
-              className="block overflow-hidden rounded-lg border"
-            >
-              <div className="relative h-44 w-full">
-                <Image
-                  src={p.cover}
-                  alt={p.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-3">
-                <div className="font-medium">{p.title}</div>
-                <div className="text-sm opacity-70">
-                  {p.location} · {p.year}
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
+        <ProjectsCarousel />
       </section>
     </div>
   );
