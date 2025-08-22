@@ -1,0 +1,20 @@
+{
+  "links": [
+    {
+      "label": "Twitter",
+      "href": "https://twitter.com/yourprofile",
+      "icon": "Twitter"
+    },
+    {
+      "label": "LinkedIn",
+      "href": "https://linkedin.com/in/yourprofile",
+      "icon": "Linkedin"
+    },
+    {
+      "label": "Instagram",
+      "href": "https://instagram.com/yourprofile",
+      "icon": "Instagram"
+    }
+  ],
+  "copyright": "© 2025 Your Architecture Firm. All rights reserved."
+}

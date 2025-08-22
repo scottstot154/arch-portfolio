@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "keen-slider/keen-slider.min.css";
 
 body { @apply bg-white text-neutral-900 antialiased; }
 .prose img { border-radius: 0.75rem; }
