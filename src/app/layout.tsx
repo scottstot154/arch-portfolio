@@ -23,7 +23,7 @@ export default function RootLayout({
         </header>
 
         {/* Main Content */}
-        <main className="flex-grow mx-auto w-full max-w-6xl p-6">
+        <main className="flex-grow mx-auto w-full max-w-6xl p-6 pt-24">
           {children}
         </main>
 

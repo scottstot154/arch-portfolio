@@ -42,7 +42,7 @@ export default function Hero({
         <div
           className={`${
             align === "left" ? "max-w-3xl" : "max-w-4xl"
-          } text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.35)]`}
+          } text-white drop-shadow-[radial-gradient(circle_at_center,rgba(0,0,0,0.6)_0%,rgba(0,0,0,0.4)_50%,rgba(0,0,0,0)_100%)]`}
         >
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-semibold tracking-tight">
             {title}
