@@ -26,15 +26,15 @@ function Carousel({ images }: { images: string[] }) {
       <div className="relative aspect-[16/9] overflow-visible">
         {/* LEFT (Previous) */}
         {images.length > 1 && (
-          <div className="absolute top-1/2 -translate-y-1/2 left-[-2%] h-[65%] w-[50%] opacity-45 blur-[1px] pointer-events-none z-0">
+          <div className="absolute top-1/2 -translate-y-1/2 left-[-8%] h-[75%] w-[55%] opacity-50 blur-[2px] pointer-events-none z-0">
             <Image
               src={images[prevIdx]}
               alt="Previous"
               fill
               className="object-contain"
               style={{
-                transform: "scaleX(-1) perspective(1200px) rotateY(8deg)",
-                filter: "saturate(0.9) brightness(0.9)",
+                transform: "perspective(1200px) rotateY(12deg) scale(0.92)",
+                filter: "saturate(0.85) brightness(0.85)",
               }}
               sizes="50vw"
             />
@@ -43,15 +43,15 @@ function Carousel({ images }: { images: string[] }) {
 
         {/* RIGHT (Next) */}
         {images.length > 1 && (
-          <div className="absolute top-1/2 -translate-y-1/2 right-[-2%] h-[65%] w-[50%] opacity-45 blur-[1px] pointer-events-none z-0">
+          <div className="absolute top-1/2 -translate-y-1/2 right-[-8%] h-[75%] w-[55%] opacity-50 blur-[2px] pointer-events-none z-0">
             <Image
               src={images[nextIdx]}
               alt="Next"
               fill
               className="object-contain"
               style={{
-                transform: "scaleX(-1) perspective(1200px) rotateY(-8deg)",
-                filter: "saturate(0.9) brightness(0.9)",
+                transform: "perspective(1200px) rotateY(-12deg) scale(0.92)",
+                filter: "saturate(0.85) brightness(0.85)",
               }}
               sizes="50vw"
             />
@@ -64,10 +64,10 @@ function Carousel({ images }: { images: string[] }) {
             <motion.div
               key={index}
               className="absolute inset-0"
-              initial={{ opacity: 0, scale: 0.96 }}
+              initial={{ opacity: 0, scale: 0.94 }}
               animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 1.02 }}
-              transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+              exit={{ opacity: 0, scale: 1.04 }}
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
             >
               <Image
                 src={images[index]}
@@ -88,14 +88,14 @@ function Carousel({ images }: { images: string[] }) {
           <button
             onClick={prev}
             aria-label="Previous image"
-            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full z-20"
+            className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 transition-colors text-white p-3 rounded-full z-20 shadow-lg"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
           <button
             onClick={next}
             aria-label="Next image"
-            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full z-20"
+            className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 transition-colors text-white p-3 rounded-full z-20 shadow-lg"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
@@ -113,13 +113,13 @@ export default function ProjectImagesCarousel({
 
   if (hasBefore) {
     return (
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
         <div>
-          <h3 className="text-center text-lg font-semibold mb-2">Before</h3>
+          <h3 className="text-center text-lg font-semibold mb-3">Before</h3>
           <Carousel images={beforeImages!} />
         </div>
         <div>
-          <h3 className="text-center text-lg font-semibold mb-2">After</h3>
+          <h3 className="text-center text-lg font-semibold mb-3">After</h3>
           <Carousel images={images} />
         </div>
       </div>
