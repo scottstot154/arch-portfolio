@@ -30,7 +30,7 @@ export default function Home() {
               View Projects
             </Link>
             <Link
-              href="/contact"
+              href="tel:+919876543210"
               className="rounded border border-white px-6 py-3 font-medium text-white hover:bg-white hover:text-black transition"
             >
               Contact Us
