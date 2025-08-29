@@ -46,7 +46,7 @@ export default function Home() {
         <div className="flex justify-end">
           <Link
             href="/projects"
-            className="mt-2 inline-block text-blue-600 hover:underline"
+            className="mt-2 inline-block text-600 underline hover:text-bold"
           >
             See all projects →
           </Link>

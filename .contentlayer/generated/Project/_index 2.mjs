@@ -2,6 +2,5 @@
 
 import projects__anotherHouseMdx from './projects__another-house.mdx.json' assert { type: 'json' }
 import projects__courtyardHouseMdx from './projects__courtyard-house.mdx.json' assert { type: 'json' }
-import projects__restaurantMdx from './projects__restaurant.mdx.json' assert { type: 'json' }
 
-export const allProjects = [projects__anotherHouseMdx, projects__courtyardHouseMdx, projects__restaurantMdx]
+export const allProjects = [projects__anotherHouseMdx, projects__courtyardHouseMdx]
