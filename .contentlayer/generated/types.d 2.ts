@@ -20,8 +20,6 @@ export type Project = {
   category: string
   cover: string
   summary: string
-  images: string[]
-  beforeImages?: string[] | undefined
   /** MDX file body */
   body: MDX
   slug: string

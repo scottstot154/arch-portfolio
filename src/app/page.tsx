@@ -30,7 +30,7 @@ export default function Home() {
               View Projects
             </Link>
             <Link
-              href="/contact"
+              href="tel:+919876543210"
               className="rounded border border-white px-6 py-3 font-medium text-white hover:bg-white hover:text-black transition"
             >
               Contact Us
@@ -46,7 +46,7 @@ export default function Home() {
         <div className="flex justify-end">
           <Link
             href="/projects"
-            className="mt-2 inline-block text-blue-600 hover:underline"
+            className="mt-2 inline-block text-600 underline hover:text-bold"
           >
             See all projects →
           </Link>

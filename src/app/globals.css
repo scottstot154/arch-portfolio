@@ -3,8 +3,59 @@
 @tailwind utilities;
 @import "keen-slider/keen-slider.min.css";
 
-body { @apply bg-white text-neutral-900 antialiased; }
-.prose img { border-radius: 0.75rem; }
+/* Remove the background if not needed */
+body {
+  @apply bg-white text-neutral-900 antialiased;
+  margin: 0;
+  min-height: 100vh;
+  background-color: #ffffff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Background grid layer */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.12) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.12) 1px, transparent 1px);
+  background-size: 40px 40px;
+
+  /* Combine fade + drift */
+  animation: gridFade 6s ease-in-out infinite alternate,
+    gridDrift 30s linear infinite;
+}
+
+/* Fade animation */
+@keyframes gridFade {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
+
+/* Slow diagonal drift */
+/* @keyframes gridDrift {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 80px 80px;
+  }
+} */
+
+.prose img {
+  border-radius: 0.75rem;
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;

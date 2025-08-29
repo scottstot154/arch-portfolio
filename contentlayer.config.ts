@@ -12,6 +12,8 @@ export const Project = defineDocumentType(() => ({
     category: { type: "string", required: true },
     cover: { type: "string", required: true },
     summary: { type: "string", required: true },
+    images: { type: "list", of: { type: "string" }, required: true },
+    beforeImages: { type: "list", of: { type: "string" }, required: false },
   },
   computedFields: {
     slug: {

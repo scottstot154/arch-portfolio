@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16",
+    "framer-motion": "^12.23.12",
     "gray-matter": "^4.0.3",
     "keen-slider": "^6.8.6",
     "lucide-react": "^0.540.0",
